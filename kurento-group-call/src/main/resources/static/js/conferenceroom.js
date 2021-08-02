@@ -19,6 +19,9 @@ var ws = new WebSocket('wss://' + location.host + '/groupcall');
 var participants = {};
 var name;
 
+console.log(`ws: ${ws}`)
+console.log(`ws address: wss://${location.host}/groupcall`)
+
 window.onbeforeunload = function() {
 	ws.close();
 };
